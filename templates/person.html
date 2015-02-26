@@ -1,0 +1,20 @@
+<div class="person">
+    <div class="action {{person.score}} {{person.sex}}">Tag kontakt!</div>
+    <img src="{{ person.image.url }}" />
+    <div class="name">{{ person.name }}</div>
+    <div class="phone">+{{ person.phone }}</div>
+    <div class="email">{{ person.email }}</div>
+    {% if person.quote_set.all %}
+    <div class="quotes">
+        {% for quote in person.quote_set.all %}
+        <div class="quote">
+            »{{ quote.quote }}«
+            <div class="where">
+            {{ quote.date|date:"d/m/Y" }} {% if quote.url %}<a href="{{ quote.url }}">{{ quote.media }}</a>{% else %}{{ quote.media }}{% endif %}
+        </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>

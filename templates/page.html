@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block "content" %}
+        
+<div id="wrap">
+    <h1>Drop ACTA<span class="superstar">*</span></h1>
+
+    <div class="actainfo">
+        <span class="tinystar">*</span> ACTA er en international handelsaftale, der vil få vidtrækkende konsekvenser for internettet og vores rettigheder som brugere af det. Danmark underskrev ACTA d. 26. januar uden nogen forudgående demokratisk debat.
+        Traktaten er dog endnu ikke ratificeret af EU Parlamentet. Der er altså stadig er tid til at forklare de folkevalgte hvorfor de bør stemme imod ACTA.
+    </div>
+
+
+    <div class="box wrong">
+        <h2>Hvad er der galt med ACTA?</h2>
+        <ul>
+            <li>
+                <strong>1</strong>
+                <div class="wrongmain">ACTA forbigår demokratiet og skaber en <b>parallel lovgivningsproces</b> udenfor demokratisk kontrol. <span class="wronglink">»</span></div>
+                <div class="wronghide">
+                    <ul>
+                        <li>Europaparlamentets egen udpegede rapportør om ACTA gik af i protest mod den politiske proces bag traktaten, som han kaldte en »maskarade«.</li>
+
+                        <li>Forhandlingerne om ACTA er foregået i dybeste hemmelighed. Hvis traktaten biver vedtaget, skaber det præcedens for at indføre vidtgående lovgivning ad bagvejen i form af handelsaftaler.</li>
+
+                        <li>I tilfælde af at ACTA ratificeres, skal en såkaldt ACTA-komite senere vurdere tilføjelser til traktaten. Der bliver således åbnet for en parallel lovgivende magt.</li>
+
+                        <li>En lang række førende europæiske professorer peger på at ACTA strider imod EUs love i spørgsmål om grænsekontrol, erstatningsansvar og retssikkerhed.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <strong>2</strong>
+                <div class="wrongmain">ACTA <b>eskalerer</b> strafferetlige sanktioner ud af proportion og i vage og brede formuleringer. <span class="wronglink">»</span></div>
+            
+                <div class="wronghide">
+                    <ul>
+                        <li>ACTA indfører strafferetlige sanktioner for "meddelagtighed" i ophavsretskrænkelse. Hvad der præcist falder inden for "meddelagtighed" ligger ikke fast.</li>
+                        <li>Traktaten indfører strafferetlige sanktioner for ophavsretskrænkelser i "kommerciel skala". Hvilket omfang "kommerciel skala" præcist dækker over står ikke klart.</li>
+                        <li>At ændre straffeloven gennem en handelstraktat er uhørt, især når det sker uden demokratisk debat.</li>
+                    </ul>
+                </div>
+            
+            </li>
+            <li>
+                <strong>3</strong>
+                <div class="wrongmain">ACTA forvandler internetvirksomheder til <b>privat ophavsretspoliti</b> ved at tvinge dem til at tage juridisk ansvar for deres brugeres adfærd på nettet. <span class="wronglink">»</span></div>
+            
+                <div class="wronghide">
+                    <ul>
+                        <li>ACTA opfordrer til "samarbejde" mellem rettighedshavere og internetudbydere, hvad EU Kommisionen kalder "udenomsretslige foranstaltninger", og fører til private efterforsknings og retsudøvelsesinstanser.</li>
+                        <li>Truslen om civilretlige og strafferetlige sanktioner i traktaten kan tvinge internetudbydere til at "samarbejde" med rettighedshavere.</li>
+                        <li>ACTA tillader rettighedshavere at indsamle personfølsomme data om internetbrugere uden om domstolene. Dette er en krænkelse af retten til privatlivets fred.</li>
+                        <li>Traktatens afsnit om erstatning ved ophavsretskrænkelse baserer sig på myten om "det tabte salg", som undersøgelse efter undersøgelse har vist, at der ikke er evidens for.</li>
+                        <li>Den brede formulering om håndhævelse overfor "krænkende" distributionskanaler kan tolkes som en klar trussel mod blogs, P2P-netværk, fri software og andre kilder til spredning af kultur og viden gennem internettet.</li>
+                    </ul>
+                </div>
+            
+            </li>
+        </ul>
+    </div>
+    
+    
+    <div style="height: 20px">&nbsp;</div>
+    
+    <h2>Har du talt med din<br><span style="font-size: 44px; font-weight: 900">Europaparlamentariker</span><br>i dag?<span class="star">*</span></h2>
+    
+    <div class="actainfo">
+        <span class="tinystar">*</span> Før ACTA kan blive vedtaget, skal den først stemmes igennem Europaparlamentet, formentlig i juni 2012. Du kan derfor stadig nå at kontakte de danske europaparlamentarikere og argumentere for hvorfor de skal stemme nej til ACTA. 
+    </div>
+
+    {% if positive %}
+    <div class="box">
+        <h2>Hvem stemmer for ACTA?<a class="star" title="Læs mere her..." target="_blank" href="http://pad.bitbureauet.dk/acta-dkpol">*</a></h2>
+        {% for person in positive %}
+            {% include "person.html" %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if uncertain %}
+    <div class="box">
+        <h2>Hvem vakler om ACTA?<a class="star" title="Klik for at læse mere..." target="_blank" href="http://pad.bitbureauet.dk/acta-dkpol">*</a></h2>
+        {% for person in uncertain %}
+            {% include "person.html" %}
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if negative %}
+    <div class="box">
+        <h2>Hvem stemmer imod ACTA?<a class="star" title="Klik for at læse mere..." target="_blank" href="http://pad.bitbureauet.dk/acta-dkpol">*</a></h2>
+        {% for person in negative %}
+            {% include "person.html" %}
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    <div style="height: 20px"></div>
+    
+    <h2><span style="font-size: 45px; font-weight: 900;"><span style="font-size: 60px">ACTA</span> <br>er det nye<br> <span style="font-size: 60px">SOPA</span></span></h2>
+    
+    <div style="height: 20px">&nbsp;</div>
+
+    <object width="526" height="374">
+        <param name="movie" value="http://video.ted.com/assets/player/swf/EmbedPlayer.swf"></param>
+        <param name="allowFullScreen" value="true" />
+        <param name="allowScriptAccess" value="always"/>
+        <param name="wmode" value="transparent"></param>
+        <param name="bgColor" value="#ffffff"></param>
+        <param name="flashvars" value="vu=http://video.ted.com/talk/stream/2012S/Blank/ClayShirky_2012S-320k.mp4&su=http://images.ted.com/images/ted/tedindex/embed-posters/ClayShirky_2012S-embed.jpg&vw=512&vh=288&ap=0&ti=1329&lang=en&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=defend_our_freedom_to_share_or_why_sopa_is_a_bad_idea;year=2012;theme=master_storytellers;theme=media_that_matters;event=TEDSalon+NY2012;tag=business;tag=creativity;tag=media;tag=politics;tag=technology;&preAdTag=tconf.ted/embed;tile=1;sz=512x288;" />
+        <embed src="http://video.ted.com/assets/player/swf/EmbedPlayer.swf" pluginspace="http://www.macromedia.com/go/getflashplayer" width="526" height="374" type="application/x-shockwave-flash" wmode="transparent" bgColor="#ffffff" allowFullScreen="true" allowScriptAccess="always" flashvars="vu=http://video.ted.com/talk/stream/2012S/Blank/ClayShirky_2012S-320k.mp4&su=http://images.ted.com/images/ted/tedindex/embed-posters/ClayShirky_2012S-embed.jpg&vw=512&vh=288&ap=0&ti=1329&lang=en&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=defend_our_freedom_to_share_or_why_sopa_is_a_bad_idea;year=2012;theme=master_storytellers;theme=media_that_matters;event=TEDSalon+NY2012;tag=business;tag=creativity;tag=media;tag=politics;tag=technology;&preAdTag=tconf.ted/embed;tile=1;sz=512x288;">
+            <a href="http://video.ted.com/talk/stream/2012S/Blank/ClayShirky_2012S-320k.mp4" style="position: relative; top: -374px;"><img src="ted.png" /></a>
+        </embed>
+    </object>
+
+    <div class="foot">
+        Hvis du vil vide mere om hvordan vi sammen stopper ACTA anbefaler <a href="https://bitbureauet.dk/">Bitbureauet</a> <i>La Quadrature du Nets</i> <a href="http://www.laquadrature.net/wiki/How_to_act_against_ACTA#Next_steps_in_the_European_Parliament">wikiguide</a>, hvor indholdet til denne side er remixet fra. 
+    </div>
+    
+    <div class="foot">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
+    </div>
+</div>
+
+
+<div style="display: none;" class="popup_person">
+        
+    {% for script in callscripts %}
+    <div id="{{script.idtag}}">
+        
+        {{ script.html|safe }}
+        
+    </div>
+    {% endfor %}
+    
+</div>
+        
+{% endblock %}
